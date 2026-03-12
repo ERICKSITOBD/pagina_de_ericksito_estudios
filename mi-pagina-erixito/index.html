@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi web xd</title>
+
+<style> body{
+    animation: fondo 6s infinite;
+}
+
+@keyframes fondo{
+    0%{background-color: lightblue;}
+    25%{background-color: lightyellow;}
+    50%{background-color: lightgreen;}
+    75%{background-color: lightpink;}
+    100%{background-color: lightblue;}
+}
+
+h1{
+    text-align:center;
+    font-size:40px;
+    animation: colores 2s infinite;
+}
+
+@keyframes colores{
+    0%{color:red;}
+    25%{color:blue;}
+    50%{color:green;}
+    75%{color:orange;}
+    100%{color:purple;}
+}
+
+.boton-blog{
+    font-size:25px;
+    padding:15px 30px;
+    background-color:blue;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.boton-blog:hover{
+    background-color:darkblue;
+}
+
+.dedos{
+    font-size:30px;
+    animation: apuntar 1s infinite alternate;
+}
+
+@keyframes apuntar{
+    from{margin-left:0px;}
+    to{margin-left:10px;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>✨ HOLA BIENVENIDO A ESTA PAGINA SIMPLE Y SENCILLA ✨</h1>
+
+<h2>Foto de prueba</h2>
+
+<img src="img/logo2.png" alt="Logo" width="1000" height="500">
+
+<p>Esta página la sirve Python puro sin instalar nada extra.</p>
+<p>Fecha: 08 marzo 2026</p>
+
+<br><br>
+
+<span class="dedos">👉👉</span>
+
+<a href="https://cocademi.blogspot.com/2026/03/entrada-y-bienvenida-la-pagina.html" target="_blank">
+<button class="boton-blog">VISITA MI BLOG</button>
+</a>
+
+<span class="dedos">👈👈</span>
+
+</body>
+</html>
