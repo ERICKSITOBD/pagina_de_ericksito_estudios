@@ -1,113 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Mi web xd</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web - ERICKSITO ESTUDIOS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
 
-<style> 
-    body{
-        animation: fondo 6s infinite;
-    }
+        /* Banner promocional estilo Hostinger */
+        .banner-oferta {
+            background-color: #ffeb3b; /* amarillo fuerte */
+            color: #000;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
 
-    @keyframes fondo{
-        0%{background-color: lightblue;}
-        25%{background-color: lightyellow;}
-        50%{background-color: lightgreen;}
-        75%{background-color: lightpink;}
-        100%{background-color: lightblue;}
-    }
+        /* Header con logo y menú */
+        header {
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #673de6; /* morado típico de Hostinger */
+        }
+        .menu-btn {
+            font-size: 2rem;
+            cursor: pointer;
+            color: #333;
+        }
 
-    h1{
-        text-align:center;
-        font-size:40px;
-        animation: colores 2s infinite;
-    }
+        /* Contenido principal */
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
 
-    @keyframes colores{
-        0%{color:red;}
-        25%{color:blue;}
-        50%{color:green;}
-        75%{color:orange;}
-        100%{color:purple;}
-    }
+        /* Acordeón (secciones plegables como en Hostinger) */
+        .accordion {
+            margin: 40px 0;
+        }
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+        .accordion-title {
+            padding: 18px;
+            background: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-title:hover {
+            background: #f0f0f0;
+        }
+        .accordion-content {
+            display: none;
+            padding: 20px;
+            background: #fafafa;
+        }
+        .accordion-content.active {
+            display: block;
+        }
 
-    .boton-blog{
-        font-size:25px;
-        padding:15px 30px;
-        background-color:blue;
-        color:white;
-        border:none;
-        border-radius:10px;
-        cursor:pointer;
-    }
+        /* Botones estilo Hostinger */
+        .botones {
+            margin: 50px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .btn {
+            font-size: 1.4rem;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-blog {
+            background: #00aaff;
+            color: white;
+        }
+        .btn-blog:hover {
+            background: #0088cc;
+        }
+        .btn-discord {
+            background: #5865F2;
+            color: white;
+            box-shadow: 0 4px 0 #4752C4;
+        }
+        .btn-discord:hover {
+            background: #4752C4;
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #4752C4;
+        }
 
-    .boton-blog:hover{
-        background-color:darkblue;
-    }
-
-    .dedos{
-        font-size:30px;
-        animation: apuntar 1s infinite alternate;
-    }
-
-    @keyframes apuntar{
-        from{margin-left:0px;}
-        to{margin-left:10px;}
-    }
-
-    /* === Botón Discord nuevo === */
-    .boton-discord {
-        font-size: 25px;
-        padding: 15px 30px;
-        background-color: #5865F2;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 4px 0 #4752C4;
-    }
-
-    .boton-discord:hover {
-        background-color: #4752C4;
-        transform: translateY(2px);
-        box-shadow: 0 2px 0 #4752C4;
-    }
-
-    .boton-discord:active {
-        transform: translateY(4px);
-        box-shadow: none;
-    }
-</style>
-
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 40px 20px 20px;
+            font-size: 0.9rem;
+        }
+        .social-icons {
+            margin: 20px 0;
+        }
+        .social-icons a {
+            color: #aaa;
+            margin: 0 12px;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+        .pagos {
+            margin: 20px 0;
+        }
+        .pagos img {
+            height: 35px;
+            margin: 0 10px;
+        }
+    </style>
 </head>
-
 <body>
 
-<h1>✨ HOLA BIENVENIDO A ESTA PAGINA SIMPLE Y SENCILLA ✨</h1>
+    <div class="banner-oferta">
+        ¡No te pierdas las ofertas por tiempo limitado!
+    </div>
 
-<h2>Foto de prueba</h2>
+    <header>
+        <div class="header-container">
+            <div class="logo">ERICKSITO ESTUDIOS</div>
+            <div class="menu-btn">≡</div>
+        </div>
+    </header>
 
-<img src="logo2.png" alt="logo de ERICKSITO-ESTUDIOS" width="500" height="auto">
+    <main>
+        <h1>✨ ¡Bienvenido a mi página sencilla! ✨</h1>
 
-<p>Esta página la sirve Python puro sin instalar nada extra.</p>
-<p>Fecha: 08 marzo 2026</p>
+        <h2>Foto de prueba</h2>
+        <img src="logo2.png" alt="Logo de ERICKSITO-ESTUDIOS">
 
-<br><br>
+        <p>Esta página la sirve Python puro sin instalar nada extra.</p>
+        <p>Fecha: 18 de marzo de 2026</p>
 
-<div style="text-align: center; margin: 40px 0;">
-    <span class="dedos">👉👉</span>
+        <!-- Acordeón estilo Hostinger -->
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-title">HERRAMIENTAS ▾</div>
+                <div class="accordion-content">
+                    
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">INFORMACIÓN ▾</div>
+                <div class="accordion-content">
+                    Datos sobre ti, tu proyecto, etc.
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">EMPRESA ▾</div>
+                <div class="accordion-content">
+                    Algo sobre ERICKSITO ESTUDIOS.
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">SOPORTE ▾</div>
+                <div class="accordion-content">
+                    Contacto o Discord para ayuda.
+                </div>
+            </div>
+        </div>
 
-    <a href="https://cocademi.blogspot.com/2026/03/entrada-y-bienvenida-la-pagina.html" target="_blank">
-        <button class="boton-blog">VISITA MI BLOG</button>
-    </a>
+        <div class="botones">
+            <a href="https://cocademi.blogspot.com/2026/03/entrada-y-bienvenida-la-pagina.html" target="_blank">
+                <button class="btn btn-blog">VISITA MI BLOG</button>
+            </a>
+            <a href="https://discord.gg/X7GKVJrq2" target="_blank">
+                <button class="btn btn-discord">¡Únete a mi Discord! 🚀</button>
+            </a>
+        </div>
+    </main>
 
-    <a href="https://discord.gg/X7GKVJrq2" target="_blank">
-        <button class="boton-discord">¡Únete a mi Discord! 🚀</button>
-    </a>
+    <footer>
+        <div class="social-icons">
+            <a href="#">in</a>
+            <a href="#">f</a>
+            <a href="#">📷</a>
+            <a href="#">X</a>
+            <a href="#">▶</a>
+            <a href="#">reddit</a>
+            <a href="#">♪</a>
+        </div>
 
-    <span class="dedos">👈👈</span>
-</div>
+        <div class="pagos">
+            <img src="https://via.placeholder.com/60x35?text=VISA" alt="Visa">
+            <img src="https://via.placeholder.com/60x35?text=Mastercard" alt="Mastercard">
+            <img src="https://via.placeholder.com/60x35?text=AMEX" alt="Amex">
+            <span>y más</span>
+        </div>
+
+        <p>Políticas de privacidad | Términos | Reembolso | etc.</p>
+        <p>© 2004-2026 ERICKSITO ESTUDIOS: publica, crece y triunfa</p>
+    </footer>
+
+    <script>
+        // JavaScript simple para el acordeón
+        document.querySelectorAll('.accordion-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const content = title.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
