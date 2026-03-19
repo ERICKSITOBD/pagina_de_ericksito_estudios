@@ -4,56 +4,80 @@
 <meta charset="UTF-8">
 <title>Mi web xd</title>
 
-<style> body{
-    animation: fondo 6s infinite;
-}
+<style> 
+    body{
+        animation: fondo 6s infinite;
+    }
 
-@keyframes fondo{
-    0%{background-color: lightblue;}
-    25%{background-color: lightyellow;}
-    50%{background-color: lightgreen;}
-    75%{background-color: lightpink;}
-    100%{background-color: lightblue;}
-}
+    @keyframes fondo{
+        0%{background-color: lightblue;}
+        25%{background-color: lightyellow;}
+        50%{background-color: lightgreen;}
+        75%{background-color: lightpink;}
+        100%{background-color: lightblue;}
+    }
 
-h1{
-    text-align:center;
-    font-size:40px;
-    animation: colores 2s infinite;
-}
+    h1{
+        text-align:center;
+        font-size:40px;
+        animation: colores 2s infinite;
+    }
 
-@keyframes colores{
-    0%{color:red;}
-    25%{color:blue;}
-    50%{color:green;}
-    75%{color:orange;}
-    100%{color:purple;}
-}
+    @keyframes colores{
+        0%{color:red;}
+        25%{color:blue;}
+        50%{color:green;}
+        75%{color:orange;}
+        100%{color:purple;}
+    }
 
-.boton-blog{
-    font-size:25px;
-    padding:15px 30px;
-    background-color:blue;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-}
+    .boton-blog{
+        font-size:25px;
+        padding:15px 30px;
+        background-color:blue;
+        color:white;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+    }
 
-.boton-blog:hover{
-    background-color:darkblue;
-}
+    .boton-blog:hover{
+        background-color:darkblue;
+    }
 
-.dedos{
-    font-size:30px;
-    animation: apuntar 1s infinite alternate;
-}
+    .dedos{
+        font-size:30px;
+        animation: apuntar 1s infinite alternate;
+    }
 
-@keyframes apuntar{
-    from{margin-left:0px;}
-    to{margin-left:10px;}
-}
+    @keyframes apuntar{
+        from{margin-left:0px;}
+        to{margin-left:10px;}
+    }
 
+    /* === Botón Discord nuevo === */
+    .boton-discord {
+        font-size: 25px;
+        padding: 15px 30px;
+        background-color: #5865F2;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 0 #4752C4;
+    }
+
+    .boton-discord:hover {
+        background-color: #4752C4;
+        transform: translateY(2px);
+        box-shadow: 0 2px 0 #4752C4;
+    }
+
+    .boton-discord:active {
+        transform: translateY(4px);
+        box-shadow: none;
+    }
 </style>
 
 </head>
@@ -62,22 +86,28 @@ h1{
 
 <h1>✨ HOLA BIENVENIDO A ESTA PAGINA SIMPLE Y SENCILLA ✨</h1>
 
-<h2>LOGO</h2>
+<h2>Foto de prueba</h2>
 
-<img src="logo2.png" alt="logo de ERICKSITO-ESTUDIOS" width="1000" height="auto">
+<img src="img/logo2.png" alt="Logo" width="1000" height="500">
 
-<p>Esta página fue hecha Python puro con VSC.</p>
-<p>Fecha de creacion: 08 marzo 2026</p>
+<p>Esta página la sirve Python puro sin instalar nada extra.</p>
+<p>Fecha: 08 marzo 2026</p>
 
 <br><br>
 
-<span class="dedos">👉👉</span>
+<div style="text-align: center; margin: 40px 0;">
+    <span class="dedos">👉👉</span>
 
-<a href="https://cocademi.blogspot.com/2026/03/entrada-y-bienvenida-la-pagina.html" target="_blank">
-<button class="boton-blog">VISITA MI BLOG</button>
-</a>
+    <a href="https://cocademi.blogspot.com/2026/03/entrada-y-bienvenida-la-pagina.html" target="_blank">
+        <button class="boton-blog">VISITA MI BLOG</button>
+    </a>
 
-<span class="dedos">👈👈</span>
+    <a href="https://discord.gg/X7GKVJrq2" target="_blank">
+        <button class="boton-discord">¡Únete a mi Discord! 🚀</button>
+    </a>
+
+    <span class="dedos">👈👈</span>
+</div>
 
 </body>
 </html>
