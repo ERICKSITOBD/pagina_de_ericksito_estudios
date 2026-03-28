@@ -17,7 +17,7 @@
             line-height: 1.6;
         }
 
-        /* Banner promocional */
+        /* Banner y Header (sin cambios) */
         .banner-oferta {
             background-color: #ffeb3b;
             color: #000;
@@ -26,8 +26,6 @@
             font-weight: bold;
             font-size: 1.1rem;
         }
-
-        /* Header */
         header {
             background-color: white;
             padding: 15px 20px;
@@ -54,32 +52,20 @@
             color: #333;
         }
 
-        /* Contenido principal */
         main {
             max-width: 900px;
             margin: 30px auto;
             padding: 0 20px;
             text-align: center;
         }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        img { max-width: 100%; height: auto; border-radius: 10px; margin: 20px 0; }
 
         /* Acordeón */
         .accordion {
             margin: 40px 0;
         }
-        .accordion-item {
-            border-bottom: 1px solid #ddd;
-        }
+        .accordion-item { border-bottom: 1px solid #ddd; }
         .accordion-title {
             padding: 18px;
             background: #fff;
@@ -90,73 +76,45 @@
             justify-content: space-between;
             align-items: center;
         }
-        .accordion-title:hover {
-            background: #f0f0f0;
-        }
+        .accordion-title:hover { background: #f0f0f0; }
         .accordion-content {
             display: none;
             padding: 20px;
             background: #fafafa;
         }
-        .accordion-content.active {
-            display: block;
-        }
+        .accordion-content.active { display: block; }
 
-        /* Botones nuevos - ABAJO en el footer */
-        .botones-abajo {
-            margin: 30px 0;
-            text-align: center;
-        }
-        .btn-abajo {
-            font-size: 1.1rem;
-            padding: 12px 28px;
-            margin: 10px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: bold;
-        }
-        .btn-blog-abajo {
-            background: #00aaff;
+        /* ====================== */
+        /* NUEVA SECCIÓN COMO EN LA FOTO */
+        /* ====================== */
+        .comunidad-section {
+            background: #1a1a2e;           /* Fondo oscuro como en la foto */
             color: white;
-        }
-        .btn-blog-abajo:hover {
-            background: #0088cc;
-        }
-        .btn-discord-abajo {
-            background: #5865F2;
-            color: white;
-        }
-        .btn-discord-abajo:hover {
-            background: #4752C4;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: #aaa;
             text-align: center;
-            padding: 40px 20px 20px;
-            font-size: 0.9rem;
+            padding: 60px 20px 40px;
+            margin-top: 40px;
         }
-        .social-icons {
-            margin: 20px 0;
-        }
-        .social-icons a {
-            color: #aaa;
-            margin: 0 12px;
+        .comunidad-section h2 {
             font-size: 1.6rem;
-            text-decoration: none;
+            margin-bottom: 30px;
         }
-        .pagos {
-            margin: 20px 0;
+        .iconos-comunidad {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 30px;
         }
-        .pagos img {
-            height: 35px;
-            margin: 0 10px;
+        .iconos-comunidad a {
+            color: white;
+            font-size: 4.5rem;           /* Iconos grandes */
+            transition: transform 0.3s;
+        }
+        .iconos-comunidad a:hover {
+            transform: scale(1.15);
+        }
+        .copyright {
+            font-size: 0.95rem;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -168,21 +126,19 @@
 
     <header>
         <div class="header-container">
-            <div class="logo">ERICKSITO ESTUDIOS</div>
+            <div class="logo">ERICKSITOBD_ESTUDIOS</div>
             <div class="menu-btn">≡</div>
         </div>
     </header>
 
     <main>
-        <h1>✨ ¡Bienvenido a mi página sencilla! ✨</h1>
+        <h1>✨ ¡Bienvenido a mi página principal! ✨</h1>
 
         <h2>Foto de prueba</h2>
         <img src="logo2.png" alt="Logo de ERICKSITO-ESTUDIOS">
 
-        <p>Esta página la sirve Python puro sin instalar nada extra.</p>
         <p>Fecha: 18 de marzo de 2026</p>
 
-        <!-- Acordeón -->
         <div class="accordion">
             <div class="accordion-item">
                 <div class="accordion-title">HERRAMIENTAS ▾</div>
@@ -190,59 +146,41 @@
             </div>
             <div class="accordion-item">
                 <div class="accordion-title">INFORMACIÓN ▾</div>
-                <div class="accordion-content">
-                    Datos sobre ti, tu proyecto, etc.
-                </div>
+                <div class="accordion-content">Datos sobre ti, tu proyecto, etc.</div>
             </div>
             <div class="accordion-item">
                 <div class="accordion-title">EMPRESA ▾</div>
-                <div class="accordion-content">
-                    Algo sobre ERICKSITO ESTUDIOS.
-                </div>
+                <div class="accordion-content">Algo sobre ERICKSITO ESTUDIOS.</div>
             </div>
             <div class="accordion-item">
                 <div class="accordion-title">SOPORTE ▾</div>
-                <div class="accordion-content">
-                    Contacto o Discord para ayuda.
-                </div>
+                <div class="accordion-content">Contacto o Discord para ayuda.</div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="social-icons">
-            <a href="#">in</a>
-            <a href="#">f</a>
-            <a href="#">📷</a>
-            <a href="#">X</a>
-            <a href="#">▶</a>
-            <a href="#">reddit</a>
-            <a href="#">♪</a>
-        </div>
-
-        <!-- BOTONES NUEVOS AQUÍ ABAJO -->
-        <div class="botones-abajo">
-            <a href="https://cocademi.blogspot.com/2026/03/entrada-y-bienvenida-la-pagina.html" target="_blank" class="btn-abajo btn-blog-abajo">
-                📝 VISITA MI BLOG
+    <section class="comunidad-section">
+        <h2>Síguenos y únete a la comunidad</h2>
+        
+        <div class="iconos-comunidad">
+            <!-- Discord -->
+            <a href="https://discord.gg/X7GKVJrq2" target="_blank" title="Únete a Discord">
+                <span style="font-size: 4.8rem;">🐦</span>   <!-- Icono Discord -->
             </a>
-            <a href="https://discord.gg/X7GKVJrq2" target="_blank" class="btn-abajo btn-discord-abajo">
-                💬 ÚNETE A MI DISCORD
+            
+            <!-- Globo del mundo -->
+            <a href="https://ericksitobd.github.io/pagina_de_ericksito_estudios/" target="_blank" title="Visita nuestra web">
+                🌐
             </a>
         </div>
 
-        <div class="pagos">
-            <img src="https://via.placeholder.com/60x35?text=VISA" alt="Visa">
-            <img src="https://via.placeholder.com/60x35?text=Mastercard" alt="Mastercard">
-            <img src="https://via.placeholder.com/60x35?text=AMEX" alt="Amex">
-            <span>y más</span>
-        </div>
-
-        <p>Políticas de privacidad | Términos | Reembolso | etc.</p>
-        <p>© 2004-2026 ERICKSITO ESTUDIOS: publica, crece y triunfa</p>
-    </footer>
+        <p class="copyright">
+            © 2026 ERICKSITO'S STORE - ERICKSITOBD_ESTUDIO
+        </p>
+    </section>
 
     <script>
-        // JavaScript para el acordeón
+        // Acordeón
         document.querySelectorAll('.accordion-title').forEach(title => {
             title.addEventListener('click', () => {
                 const content = title.nextElementSibling;
