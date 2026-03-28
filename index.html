@@ -17,9 +17,9 @@
             line-height: 1.6;
         }
 
-        /* Banner promocional estilo Hostinger */
+        /* Banner promocional */
         .banner-oferta {
-            background-color: #ffeb3b; /* amarillo fuerte */
+            background-color: #ffeb3b;
             color: #000;
             text-align: center;
             padding: 12px;
@@ -27,7 +27,7 @@
             font-size: 1.1rem;
         }
 
-        /* Header con logo y menú */
+        /* Header */
         header {
             background-color: white;
             padding: 15px 20px;
@@ -46,7 +46,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #673de6; /* morado típico de Hostinger */
+            color: #673de6;
         }
         .menu-btn {
             font-size: 2rem;
@@ -73,7 +73,7 @@
             margin: 20px 0;
         }
 
-        /* Acordeón (secciones plegables como en Hostinger) */
+        /* Acordeón */
         .accordion {
             margin: 40px 0;
         }
@@ -102,38 +102,36 @@
             display: block;
         }
 
-        /* Botones estilo Hostinger */
-        .botones {
-            margin: 50px 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+        /* Botones nuevos - ABAJO en el footer */
+        .botones-abajo {
+            margin: 30px 0;
+            text-align: center;
         }
-        .btn {
-            font-size: 1.4rem;
-            padding: 15px 35px;
+        .btn-abajo {
+            font-size: 1.1rem;
+            padding: 12px 28px;
+            margin: 10px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
         }
-        .btn-blog {
+        .btn-blog-abajo {
             background: #00aaff;
             color: white;
         }
-        .btn-blog:hover {
+        .btn-blog-abajo:hover {
             background: #0088cc;
         }
-        .btn-discord {
+        .btn-discord-abajo {
             background: #5865F2;
             color: white;
-            box-shadow: 0 4px 0 #4752C4;
         }
-        .btn-discord:hover {
+        .btn-discord-abajo:hover {
             background: #4752C4;
-            transform: translateY(2px);
-            box-shadow: 0 2px 0 #4752C4;
         }
 
         /* Footer */
@@ -184,13 +182,11 @@
         <p>Esta página la sirve Python puro sin instalar nada extra.</p>
         <p>Fecha: 18 de marzo de 2026</p>
 
-        <!-- Acordeón estilo Hostinger -->
+        <!-- Acordeón -->
         <div class="accordion">
             <div class="accordion-item">
                 <div class="accordion-title">HERRAMIENTAS ▾</div>
-                <div class="accordion-content">
-                    
-                </div>
+                <div class="accordion-content"></div>
             </div>
             <div class="accordion-item">
                 <div class="accordion-title">INFORMACIÓN ▾</div>
@@ -211,15 +207,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="botones">
-            <a href="https://cocademi.blogspot.com/2026/03/entrada-y-bienvenida-la-pagina.html" target="_blank">
-                <button class="btn btn-blog">VISITA MI BLOG</button>
-            </a>
-            <a href="https://discord.gg/X7GKVJrq2" target="_blank">
-                <button class="btn btn-discord">¡Únete a mi Discord! 🚀</button>
-            </a>
-        </div>
     </main>
 
     <footer>
@@ -231,6 +218,16 @@
             <a href="#">▶</a>
             <a href="#">reddit</a>
             <a href="#">♪</a>
+        </div>
+
+        <!-- BOTONES NUEVOS AQUÍ ABAJO -->
+        <div class="botones-abajo">
+            <a href="https://cocademi.blogspot.com/2026/03/entrada-y-bienvenida-la-pagina.html" target="_blank" class="btn-abajo btn-blog-abajo">
+                📝 VISITA MI BLOG
+            </a>
+            <a href="https://discord.gg/X7GKVJrq2" target="_blank" class="btn-abajo btn-discord-abajo">
+                💬 ÚNETE A MI DISCORD
+            </a>
         </div>
 
         <div class="pagos">
@@ -245,7 +242,7 @@
     </footer>
 
     <script>
-        // JavaScript simple para el acordeón
+        // JavaScript para el acordeón
         document.querySelectorAll('.accordion-title').forEach(title => {
             title.addEventListener('click', () => {
                 const content = title.nextElementSibling;
